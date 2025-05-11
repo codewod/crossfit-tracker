@@ -1,12 +1,42 @@
-# React + Vite
+# 🏋️ CrossFit Tracker – MVP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un proyecto minimalista creado con **React + Vite + TailwindCSS** para registrar, visualizar y filtrar tus entrenamientos tipo WOD. Diseñado para atletas, coaches y entusiastas del CrossFit que desean llevar un control simple pero funcional de su progreso.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características
 
-## Expanding the ESLint configuration
+- ✅ Registro de entrenamientos tipo AMRAP, EMOM, For Time, etc.
+- ✅ Visualización de historial con diseño responsive
+- ✅ Filtros por tipo de WOD
+- ✅ Validaciones visuales por campo
+- ✅ Modo claro/oscuro automático
+- ✅ Datos mockeados desde archivo `.json`
+- ✅ Listo para producción en Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologías usadas
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) (para el deploy)
+
+---
+
+## 📦 Instalación local
+
+```bash
+# Clona el repositorio
+git clone https://github.com/codewod/crossfit-tracker.git
+
+# Ingresa a la carpeta
+cd crossfit-tracker
+
+# Instala dependencias
+npm install
+
+# Corre el proyecto en desarrollo
+npm run dev
+```
