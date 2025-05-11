@@ -1,0 +1,47 @@
+[
+  {
+    "tipo": "AMRAP",
+    "fecha": "2025-05-01",
+    "descripcion": "AMRAP 10: 10 burpees, 15 air squats, 20 sit-ups"
+  },
+  {
+    "tipo": "FOR TIME",
+    "fecha": "2025-05-03",
+    "descripcion": "21-15-9 Thrusters y Pull-ups"
+  },
+  {
+    "tipo": "TABATA",
+    "fecha": "2025-05-05",
+    "descripcion": "8 rondas: 20” on / 10” off - AirBike"
+  },
+  {
+    "tipo": "EMOM",
+    "fecha": "2025-05-06",
+    "descripcion": "EMOM 12: 10 deadlifts + 6 toes to bar"
+  },
+  {
+    "tipo": "CHIPPER",
+    "fecha": "2025-05-07",
+    "descripcion": "50 box jumps, 40 wall balls, 30 KB swings, 20 burpees, 10 rope climbs"
+  },
+  {
+    "tipo": "HERO WOD",
+    "fecha": "2025-05-08",
+    "descripcion": "Murph modificado: 1km run, 100 pushups, 200 squats, 1km run"
+  },
+  {
+    "tipo": "COMPLEX",
+    "fecha": "2025-05-09",
+    "descripcion": "Clean + Front Squat + Jerk (3 sets de 5 reps)"
+  },
+  {
+    "tipo": "SKILL WORK",
+    "fecha": "2025-05-10",
+    "descripcion": "Handstand walks + Muscle-up transitions"
+  },
+  {
+    "tipo": "SKILL WORK",
+    "fecha": "2025-05-10",
+    "descripcion": "Handstand walks + Ringmuscle-up transitions"
+  }
+]
