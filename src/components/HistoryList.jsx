@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 export default function HistoryList({ wods, filtroTipo, setFiltroTipo }) {
   const tiposUnicos = ["Todos", ...new Set(wods.map((w) => w.tipo))];
+  const [detalleActivo, setDetalleActivo] = useState(null);
 
   const wodsFiltrados =
     filtroTipo && filtroTipo !== "Todos"
@@ -37,15 +40,42 @@ export default function HistoryList({ wods, filtroTipo, setFiltroTipo }) {
           {wodsFiltrados.map((wod, index) => (
             <li
               key={index}
-              className="bg-white dark:bg-gray-800 p-4 rounded shadow"
+              className="bg-white dark:bg-gray-800 p-4 rounded shadow relative"
             >
-              <div className="flex justify-between">
-                <strong>{wod.tipo}</strong>
-                <span className="text-sm text-gray-500 dark:text-gray-400">
-                  {wod.fecha}
-                </span>
+              <div className="flex justify-between items-start">
+                <div>
+                  <strong>{wod.tipo}</strong>
+                  <p className="mt-2">{wod.descripcion}</p>
+                </div>
+                <div className="text-right">
+                  <span className="text-sm text-gray-500 dark:text-gray-400 block">
+                    {wod.fecha}
+                  </span>
+                  <button
+                    onClick={() =>
+                      setDetalleActivo(detalleActivo === index ? null : index)
+                    }
+                    className="mt-2 text-xs bg-blue-600 hover:bg-blue-700 text-white py-1 px-2 rounded"
+                  >
+                    🖨️ Ver detalle
+                  </button>
+                </div>
               </div>
-              <p className="mt-2">{wod.descripcion}</p>
+
+              {detalleActivo === index && (
+                <div className="mt-4 bg-gray-100 dark:bg-gray-700 p-3 rounded text-sm">
+                  <p>
+                    <strong>Tipo:</strong> {wod.tipo}
+                  </p>
+                  <p>
+                    <strong>Fecha:</strong> {wod.fecha}
+                  </p>
+                  <p>
+                    <strong>Descripción:</strong> {wod.descripcion}
+                  </p>
+                  {/* Aquí podrías sumar duración, calorías, notas, etc. */}
+                </div>
+              )}
             </li>
           ))}
           <p className="text-sm text-center text-gray-400 mt-auto pt-6">

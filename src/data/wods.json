@@ -43,5 +43,35 @@
     "tipo": "SKILL WORK",
     "fecha": "2025-05-10",
     "descripcion": "Handstand walks + Ringmuscle-up transitions"
+  },
+  {
+    "tipo": "DEATH BY",
+    "fecha": "2025-05-11",
+    "descripcion": "Death by burpees: 1 rep min 1, 2 reps min 2... hasta fallo"
+  },
+  {
+    "tipo": "LADDER",
+    "fecha": "2025-05-12",
+    "descripcion": "Clean & Jerk ladder: incrementar peso cada minuto"
+  },
+  {
+    "tipo": "OPEN WOD",
+    "fecha": "2025-05-13",
+    "descripcion": "Open 24.1: 15 snatches + 15 burpee box jumps, 15 min cap"
+  },
+  {
+    "tipo": "METCON",
+    "fecha": "2025-05-14",
+    "descripcion": "4 rondas por tiempo: 400m run + 20 wall balls + 10 pull-ups"
+  },
+  {
+    "tipo": "INTERVALS",
+    "fecha": "2025-05-15",
+    "descripcion": "4 x 500m row, descansar 2 min entre cada uno"
+  },
+  {
+    "tipo": "GIRLS WOD",
+    "fecha": "2025-05-16",
+    "descripcion": "Fran: 21-15-9 thrusters (95lb/65lb) y pull-ups"
   }
 ]

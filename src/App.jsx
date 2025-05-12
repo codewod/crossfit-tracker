@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
 import WODForm from "./components/WODForm";
 import HistoryList from "./components/HistoryList";
@@ -9,17 +10,6 @@ export default function App() {
   const [section, setSection] = useState("dashboard");
   const [filtroTipo, setFiltroTipo] = useState("");
   const [wods, setWods] = useState(wodsData);
-
-  // ✅ Cargar desde localStorage
-  // useEffect(() => {
-  //   const stored = localStorage.getItem('wods')
-  //   if (stored) setWods(JSON.parse(stored))
-  // }, [])
-
-  // // ✅ Guardar en localStorage cuando cambian
-  // useEffect(() => {
-  //   localStorage.setItem('wods', JSON.stringify(wods))
-  // }, [wods])
 
   const handleAddWOD = (nuevoWOD) => {
     setWods([...wods, nuevoWOD]);
@@ -45,10 +35,30 @@ export default function App() {
     }
   };
 
+  const [temaOscuro, setTemaOscuro] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (temaOscuro) {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [temaOscuro]);
+
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-black dark:text-white">
-      <Navbar onChangeSection={setSection} />
-      {renderSection()}
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-black text-gray-900 dark:text-white transition-bg duration-500">
+      <Navbar
+        onChangeSection={setSection}
+        temaOscuro={temaOscuro}
+        setTemaOscuro={setTemaOscuro}
+      />
+      <main className="flex-grow">{renderSection()}</main>
+      <Footer />
     </div>
   );
 }
